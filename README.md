@@ -5,6 +5,9 @@ DeepSeek Harness（DSH）Web 界面的深色「协议终端」皮肤：主要参
 基于deepseek做DSH的PRTS的皮肤（参考卫戍协议UI）
 
 ## 效果
+开屏动画：<img width="1992" height="974" alt="01-splash-storyboard" src="https://github.com/user-attachments/assets/75be4916-aa13-4022-93e4-d27f4ee8666c" />
+过渡动画：<img width="1992" height="974" alt="02-transition-storyboard" src="https://github.com/user-attachments/assets/63f3566b-389f-4d7d-a500-8401c7a101fa" />
+会话页面：<img width="1280" height="820" alt="06-full-look" src="https://github.com/user-attachments/assets/7606041e-aec0-4a31-8eb3-597d3b37862f" />
 
 - **配色**：固定深色协议盘（不跟随系统浅色/深色），直角面板、发丝描边、HUD 四角括号。
 - **会话区背景**：地形等高线图，`background-attachment: fixed`，滚动不动；气泡、代码块、输入区都是实色，天然盖在底图之上，图片不会被任何叠加层干扰。
