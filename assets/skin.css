@@ -1,0 +1,783 @@
+/* Protocol console skin: one fixed palette (mint + orange on near-black),
+   independent of the host light/dark preference. */
+html {
+  color-scheme: dark !important;
+}
+/* ==========================================================================
+   Garrison Protocol terminal skin + video boot splash (DeepSeek Harness UI)
+   Token overrides only: no full-screen texture, so images and previews stay
+   pixel-clean. Two palettes follow the host's light/dark preference.
+   ========================================================================== */
+
+:root {
+  --gs-font: "Bahnschrift", "DIN Alternate", "Segoe UI Variable Text", "Microsoft YaHei UI",
+    "Microsoft YaHei", system-ui, sans-serif;
+  --gs-mono: "Cascadia Mono", "JetBrains Mono", "Consolas", "Microsoft YaHei UI", monospace;
+  --gs-amber: #5ce1a0;
+  --gs-amber-hi: #b6ffdd;
+  --gs-olive: #ff7a2f;
+}
+
+body {
+  --dsw-font-family: var(--gs-font) !important;
+  --ds-font-family-code: var(--gs-mono) !important;
+  --dsw-radius-xs: 2px !important;
+  --dsw-radius-sm: 3px !important;
+  --dsw-radius-md: 4px !important;
+  --dsw-radius-lg: 6px !important;
+  --dsw-radius-xl: 8px !important;
+  --dsw-radius-panel: 8px !important;
+}
+
+body {
+  --dsw-alias-bg-base: transparent !important;
+  --dsw-alias-bg-document-preview: #040807 !important;
+  --dsw-alias-bg-document-selection: rgba(92, 225, 160, 0.3) !important;
+  --dsw-alias-label-document-preview: #b3b3a0 !important;
+  --dsw-alias-bg-layer-1: #14160f !important;
+  --dsw-alias-bg-layer-2: #191c12 !important;
+  --dsw-alias-bg-layer-3: #0f221c !important;
+  --dsw-alias-bg-mask-1: rgba(0, 0, 0, 0.64) !important;
+  --dsw-alias-bg-mask-2: rgba(0, 0, 0, 0.3) !important;
+  --dsw-alias-bg-mask-3: rgba(0, 0, 0, 0.56) !important;
+  --dsw-alias-bg-mask-photo: rgba(0, 0, 0, 0.9) !important;
+  --dsw-alias-bg-mask-drop: rgba(12, 13, 9, 0.72) !important;
+  --dsw-alias-bg-module-platform: #191c12 !important;
+  --dsw-alias-bg-multi-select: #0f221c !important;
+  --dsw-alias-bg-overlay: #14160f !important;
+  --dsw-alias-bg-skeleton: rgba(120, 230, 180, 0.06) !important;
+
+  --dsw-alias-border-inverted2: rgba(230, 244, 238, 0.16) !important;
+  --dsw-alias-border-inverted: rgba(230, 244, 238, 0.1) !important;
+  --dsw-alias-border-l1: rgba(120, 230, 180, 0.07) !important;
+  --dsw-alias-border-l2-darkmode-thin: rgba(120, 230, 180, 0.11) !important;
+  --dsw-alias-border-l2: rgba(120, 230, 180, 0.15) !important;
+  --dsw-alias-border-l3: rgba(120, 230, 180, 0.24) !important;
+  --dsw-alias-border-l4: rgba(120, 230, 180, 0.42) !important;
+
+  --dsw-alias-brand-primary: #e6f4ee !important;
+  --dsw-alias-brand-primary-invert: #0c0d09 !important;
+  --dsw-alias-brand-primary-new-colorprimary-new-color: #5ce1a0 !important;
+  --dsw-alias-brand-text: #e6f4ee !important;
+  --dsw-alias-button-contrast-fill: #e6f4ee !important;
+  --dsw-alias-button-elevated-fill: #0f221c !important;
+  --dsw-alias-button-floating-fill: #191c12 !important;
+  --dsw-alias-button-floating-hover: #0f221c !important;
+  --dsw-alias-button-ghost-active-border: rgba(120, 230, 180, 0.34) !important;
+  --dsw-alias-button-ghost-active-fill: #0f221c !important;
+  --dsw-alias-button-ghost-active-hover: #2a2f1f !important;
+  --dsw-alias-button-info-fill: #b8801f !important;
+  --dsw-alias-button-info-hover: #d99a2c !important;
+  --dsw-alias-button-primary-dimmed: #2a2f1f !important;
+  --dsw-alias-button-primary-fill: #c9ffe6 !important;
+  --dsw-alias-button-primary-hover: #f7ecd2 !important;
+  --dsw-alias-button-tool-bar-fill-invisible: rgba(12, 13, 9, 0.55) !important;
+  --dsw-alias-button-tool-bar-fill: rgba(42, 47, 31, 0.72) !important;
+  --dsw-alias-button-tool-bar-hover: rgba(42, 47, 31, 0.94) !important;
+
+  --dsw-alias-interactive-bg-active: rgba(92, 225, 160, 0.12) !important;
+  --dsw-alias-interactive-bg-hover: rgba(92, 225, 160, 0.06) !important;
+  --dsw-alias-interactive-bg-hover-accent: rgba(92, 225, 160, 0.18) !important;
+  --dsw-alias-interactive-bg-hover-danger: rgba(224, 90, 60, 0.16) !important;
+  --dsw-alias-interactive-bg-hover-solid: #0f221c !important;
+
+  --dsw-alias-label-caption: #5f7a71 !important;
+  --dsw-alias-label-deep-diving: #c9b78e !important;
+  --dsw-alias-label-deep-diving-shimmer: #ffd79a !important;
+  --dsw-alias-label-dimmed: #21322c !important;
+  --dsw-alias-label-primary: #e6f4ee !important;
+  --dsw-alias-label-primary-bluish: #f2f0e2 !important;
+  --dsw-alias-label-primary-dimmed: #c8e0d8 !important;
+  --dsw-alias-label-primary-foreground: #17170f !important;
+  --dsw-alias-label-primary-inverted: #14160f !important;
+  --dsw-alias-label-secondary: #b3b3a0 !important;
+  --dsw-alias-label-shimmer: rgba(255, 255, 255, 0.32) !important;
+  --dsw-alias-label-tertiary: #7c978e !important;
+  --dsw-alias-link: #8df3c2 !important;
+  --dsw-alias-menu-icon: #c8e0d8 !important;
+
+  --dsw-alias-markdown-citation: #191c12 !important;
+  --dsw-alias-markdown-code-block: #040807 !important;
+  --dsw-alias-markdown-code-block-banner: #12150d !important;
+  --dsw-alias-markdown-code-segment-selected: #0f221c !important;
+  --dsw-alias-markdown-code-segment-unselected: #040807 !important;
+  --dsw-alias-markdown-inline-code: #1a1e12 !important;
+  --dsw-alias-markdown-placeholder: #191c12 !important;
+  --dsw-alias-markdown-tag: #191c12 !important;
+
+  --dsw-alias-scrollbar-bg-l1: rgba(120, 230, 180, 0.18) !important;
+  --dsw-alias-scrollbar-bg-l2: rgba(120, 230, 180, 0.26) !important;
+  --dsw-alias-scrollbar-hover-l1: rgba(120, 230, 180, 0.32) !important;
+  --dsw-alias-scrollbar-hover-l2: rgba(120, 230, 180, 0.42) !important;
+
+  --dsw-alias-state-business-primary: #5ce1a0 !important;
+  --dsw-alias-state-business-tertiary: #0f3a2a !important;
+  --dsw-alias-state-error-primary: #ff6b4a !important;
+  --dsw-alias-state-error-secondary: #ff8a6e !important;
+  --dsw-alias-state-idle-primary: #3d5a52 !important;
+  --dsw-alias-state-success-primary: #5ce1a0 !important;
+  --dsw-alias-state-success-secondary: #8dffc4 !important;
+  --dsw-alias-state-success-tertiary: #0d2a1c !important;
+  --dsw-alias-state-warn-label: #9df7cd !important;
+  --dsw-alias-state-warn-primary: #5ce1a0 !important;
+  --dsw-alias-state-warn-secondary: #b6ffdd !important;
+  --dsw-alias-state-warn-tertiary: #123a28 !important;
+
+  --dsw-alias-switch-thumb: #cfe9e0 !important;
+  --dsw-alias-toast-bg: #0e1916 !important;
+  --dsw-alias-toast-label: #f2f0e2 !important;
+  --dsw-alias-tooltip-bg: #0e1916 !important;
+  --dsw-alias-tooltip-key-bg: #143528 !important;
+  --dsw-alias-turn-trigger-bg: rgba(92, 225, 160, 0.05) !important;
+  --dsw-alias-turn-trigger-bg-hover: rgba(92, 225, 160, 0.1) !important;
+
+  --dsw-specific-bubble: #0b1714 !important;
+  --dsw-specific-bubble-highlight: #0f221c !important;
+  --dsw-specific-input-major: #070f0c !important;
+  --dsw-specific-login-input: #040807 !important;
+  --dsw-specific-menu: rgba(10, 11, 8, 0.94) !important;
+  --dsw-menu-surface-fill: rgba(10, 11, 8, 0.94) !important;
+  --dsw-alias-menu-group-header-fill: rgba(14, 16, 10, 0.95) !important;
+  --dsw-specific-selector: #0f221c !important;
+  --dsw-specific-sidebar-fill: transparent !important;
+  --dsw-specific-sidebar-nav-item-active: #0d211b !important;
+  --dsw-specific-sidebar-nav-item-active-accent: #5ce1a0 !important;
+  --dsw-specific-sidebar-nav-item-hover: #08120f !important;
+  --dsw-specific-tip: #0f221c !important;
+
+  --dsw-alias-code-diff-added: rgba(143, 191, 77, 0.14) !important;
+  --dsw-alias-code-diff-deleted: rgba(224, 90, 60, 0.14) !important;
+  --dsw-alias-file-diff-added-bg: #0a2417 !important;
+  --dsw-alias-file-diff-added-gutter: #071a10 !important;
+  --dsw-alias-file-diff-added-marker: #5ce1a0 !important;
+  --dsw-alias-file-diff-deleted-bg: #2a1210 !important;
+  --dsw-alias-file-diff-deleted-gutter: #1d0e0c !important;
+  --dsw-alias-file-diff-deleted-marker: #ff6b4a !important;
+
+  --dsw-focus-ring-color: #5ce1a0 !important;
+  --dsw-elevation-stroke-color: rgba(120, 230, 180, 0.14) !important;
+
+  --dsw-static-neutral-bluish-1000: #040807 !important;
+  --dsw-static-neutral-bluish-950: #0c0d09 !important;
+  --dsw-static-neutral-bluish-900: #14160f !important;
+  --dsw-static-neutral-bluish-875: #161911 !important;
+  --dsw-static-neutral-bluish-850: #191c12 !important;
+  --dsw-static-neutral-bluish-800: #0f221c !important;
+  --dsw-static-neutral-bluish-750: #282d1d !important;
+  --dsw-static-neutral-bluish-700: #30361f !important;
+  --dsw-static-neutral-bluish-600: #555a40 !important;
+  --dsw-static-neutral-bluish-500: #5f7a71 !important;
+  --dsw-static-neutral-bluish-400: #7c978e !important;
+  --dsw-static-neutral-bluish-300: #b3b3a0 !important;
+  --dsw-static-neutral-bluish-200: #cfcebb !important;
+  --dsw-static-neutral-bluish-150: #dcd9c5 !important;
+  --dsw-static-neutral-bluish-100: #e6f4ee !important;
+  --dsw-static-neutral-bluish-75: #eeece0 !important;
+  --dsw-static-neutral-bluish-60: #f2f0e6 !important;
+  --dsw-static-neutral-bluish-50: #f6f4ec !important;
+  --dsw-static-deepseek-50: #fdf6e8 !important;
+  --dsw-static-deepseek-100: #fbe9c8 !important;
+  --dsw-static-deepseek-200: #f7d79b !important;
+  --dsw-static-deepseek-300: #f4c46f !important;
+  --dsw-static-deepseek-400: #7ff0bb !important;
+  --dsw-static-deepseek-450: #5ce1a0 !important;
+  --dsw-static-deepseek-500: #38b982 !important;
+  --dsw-static-deepseek-600: #1f8a5f !important;
+  --dsw-static-deepseek-800: #0f3a2a !important;
+  --dsw-static-deepseek-900: #0a2a1f !important;
+  --dsw-static-blue-500: #5ce1a0 !important;
+}
+/* one amber hairline along the window's top edge */
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 2px;
+  z-index: 2147482001;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    #5ce1a0 0%,
+    rgba(92, 225, 160, 0.5) 12%,
+    rgba(92, 225, 160, 0.12) 34%,
+    rgba(92, 225, 160, 0.03) 100%
+  );
+  box-shadow: 0 0 14px rgba(92, 225, 160, 0.3);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(168, 106, 18, 0.22) !important;
+  color: #241f12 !important;
+}
+
+::selection {
+  background: rgba(92, 225, 160, 0.28) !important;
+  color: #fff6e2 !important;
+}
+
+/* ---- boot splash -------------------------------------------------------
+   Injected before <div id="root">, so it owns the first paint. Pure CSS
+   sequence: the script only adds the chime, the skip button and the
+   hand-off class. Colours are the protocol palette.
+   ---------------------------------------------------------------------- */
+.gsb {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  overflow: hidden;
+  isolation: isolate;
+  background: #050908;
+  color: #e6f4ee;
+  font-family: var(--gs-font);
+  cursor: pointer;
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.3, 0.8, 0.2, 1);
+}
+
+/* hand-off: the splash dissolves while hex modules ripple out of the centre */
+.gsb--out {
+  opacity: 0;
+  transform: scale(1.015);
+  pointer-events: none;
+  transition: opacity 0.34s ease, transform 0.42s cubic-bezier(0.3, 0.8, 0.2, 1);
+}
+
+/* ---- conversation backdrop ---------------------------------------------
+   The supplied topographic map is the page canvas: the frame and centre
+   column paint transparent, so the map shows through, while bubbles, code
+   blocks, images and the composer keep their own opaque fills and simply
+   cover it. The left sidebar stays opaque and carries the watermark. */
+body {
+  background-color: #0a0b07 !important;
+  background-image: url("__CONTOUR_IMG__") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+}
+/* ---- sidebar watermark -------------------------------------------------- */
+.gs-logo {
+  position: fixed;
+  z-index: 2147481400;
+  pointer-events: none;
+  background-image: url("__LOGO_SRC__");
+  background-repeat: no-repeat;
+  background-position: 50% 58%;
+  background-size: 78% auto;
+  opacity: 0.16;
+}
+/* ---- hex module burst --------------------------------------------------- */
+.gsx {
+  position: fixed;
+  inset: 0;
+  z-index: 2147482500;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.gsx i {
+  position: absolute;
+  width: 72px;
+  height: 83px;
+  margin: -41px 0 0 -36px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: rgba(92, 225, 160, 0.16);
+  opacity: 0;
+  animation: gsx-pop 0.62s ease forwards;
+  animation-delay: var(--d, 0s);
+}
+
+@keyframes gsx-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.55);
+  }
+  22% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+}
+.gsb[data-hidden="1"] {
+  display: none;
+}
+
+.gsb__hatch {
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(92, 225, 160, 0.05) 0 1px, rgba(0, 0, 0, 0) 1px 7px),
+    repeating-linear-gradient(-45deg, rgba(92, 225, 160, 0.035) 0 1px, rgba(0, 0, 0, 0) 1px 7px),
+    radial-gradient(120% 90% at 50% 0%, #0a1512, #050908 74%);
+  -webkit-mask-image: radial-gradient(120% 100% at 50% 40%, #000 0%, rgba(0, 0, 0, 0.6) 55%, transparent 92%);
+  mask-image: radial-gradient(120% 100% at 50% 40%, #000 0%, rgba(0, 0, 0, 0.6) 55%, transparent 92%);
+}
+
+.gsb__sweep {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -30%;
+  height: 26%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(92, 225, 160, 0.06) 60%, rgba(92, 225, 160, 0.16) 86%, rgba(0, 0, 0, 0));
+  animation: gsb-sweep 1.6s cubic-bezier(0.3, 0.6, 0.2, 1) 0.5s 1 both;
+}
+
+.gsb__frame {
+  position: absolute;
+  inset: clamp(14px, 2.6vmin, 34px);
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  border: 1px solid rgba(120, 230, 180, 0.12);
+  background:
+    linear-gradient(180deg, rgba(92, 225, 160, 0.05), rgba(0, 0, 0, 0) 26%),
+    rgba(4, 9, 8, 0.5);
+}
+
+.gsb__corner {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border: 1.5px solid rgba(92, 225, 160, 0.8);
+  opacity: 0;
+  animation: gsb-fade-in 0.4s ease 0.5s forwards;
+}
+
+.gsb__corner--tl {
+  top: -1px;
+  left: -1px;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.gsb__corner--tr {
+  top: -1px;
+  right: -1px;
+  border-left: 0;
+  border-bottom: 0;
+}
+
+.gsb__corner--bl {
+  bottom: -1px;
+  left: -1px;
+  border-right: 0;
+  border-top: 0;
+}
+
+.gsb__corner--br {
+  bottom: -1px;
+  right: -1px;
+  border-left: 0;
+  border-top: 0;
+}
+
+.gsb__head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px clamp(16px, 2.2vmin, 28px) 0;
+}
+
+.gsb__tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: #7ff0bb;
+  white-space: nowrap;
+  opacity: 0;
+  animation: gsb-fade-in 0.5s ease 0.3s forwards;
+}
+
+.gsb__tag--dim {
+  color: #5f7a71;
+  letter-spacing: 0.24em;
+  animation-delay: 0.42s;
+}
+
+.gsb__rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(92, 225, 160, 0.55), rgba(92, 225, 160, 0.05));
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: gsb-rule-in 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) 0.15s forwards;
+}
+
+.gsb__core {
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(10px, 1.6vmin, 18px);
+  width: min(820px, 88vw);
+  padding: 0 clamp(8px, 2vmin, 24px);
+}
+
+.gsb__mark {
+  display: flex;
+  align-items: baseline;
+  gap: 0.06em;
+  font-size: clamp(58px, 11.5vw, 158px);
+  font-weight: 600;
+  line-height: 0.86;
+  letter-spacing: 0.02em;
+  color: #eafff5;
+  text-shadow: 0 0 22px rgba(92, 225, 160, 0.32), 0 0 64px rgba(92, 225, 160, 0.12);
+}
+
+.gsb__mark span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.16em) scaleY(1.08);
+  animation: gsb-letter-in 0.52s cubic-bezier(0.2, 0.85, 0.25, 1) forwards;
+  animation-delay: calc(0.26s + var(--i) * 0.09s);
+}
+
+.gsb__mark-rule {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    #5ce1a0 0%,
+    color-mix(in srgb, #5ce1a0 45%, transparent) 22%,
+    color-mix(in srgb, #5ce1a0 6%, transparent) 100%
+  );
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: gsb-rule-in 0.62s cubic-bezier(0.2, 0.8, 0.2, 1) 0.72s forwards;
+}
+
+.gsb__sub {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 12px;
+  border-left: 2px solid #5ce1a0;
+}
+
+.gsb__sub-en {
+  font-family: var(--gs-mono);
+  font-size: clamp(10px, 1.15vmin, 12px);
+  letter-spacing: 0.22em;
+  color: #7ff0bb;
+  opacity: 0;
+  animation: gsb-fade-in 0.5s ease 0.62s forwards;
+}
+
+.gsb__sub-zh {
+  font-size: clamp(13px, 1.7vmin, 17px);
+  letter-spacing: 0.18em;
+  color: #cfe9e0;
+  opacity: 0;
+  animation: gsb-fade-in 0.5s ease 0.74s forwards;
+}
+
+.gsb__log {
+  align-self: stretch;
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-family: var(--gs-mono);
+  font-size: clamp(11px, 1.25vmin, 13px);
+  letter-spacing: 0.05em;
+  color: #a9c4ba;
+}
+
+.gsb__log li {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  align-items: baseline;
+  gap: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  clip-path: inset(0 100% 0 0);
+  animation: gsb-type-in 0.34s steps(28, end) forwards;
+  animation-delay: calc(0.82s + var(--i) * 0.23s);
+}
+
+.gsb__log b {
+  font-weight: 400;
+  color: #4b6a60;
+}
+
+.gsb__log span {
+  color: #cfe9e0;
+}
+
+.gsb__log i {
+  display: block;
+  height: 0.72em;
+  border-bottom: 1px dotted rgba(120, 230, 180, 0.22);
+}
+
+.gsb__log em {
+  font-style: normal;
+  letter-spacing: 0.14em;
+  color: #5ce1a0;
+}
+
+.gsb__log--warm span {
+  color: #ff9d3d;
+}
+
+.gsb__log--warm em {
+  color: #ff7a2f;
+}
+.gsb__foot {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: clamp(10px, 1.6vmin, 18px) clamp(16px, 2.2vmin, 28px) 0;
+}
+
+.gsb__bar {
+  position: relative;
+  height: 10px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(92, 225, 160, 0.12) 0px,
+    rgba(92, 225, 160, 0.12) 10px,
+    rgba(0, 0, 0, 0) 10px,
+    rgba(0, 0, 0, 0) 14px
+  );
+}
+
+.gsb__bar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    #5ce1a0 0px,
+    #5ce1a0 10px,
+    rgba(0, 0, 0, 0) 10px,
+    rgba(0, 0, 0, 0) 14px
+  );
+  box-shadow: 0 0 18px rgba(92, 225, 160, 0.42);
+  clip-path: inset(0 100% 0 0);
+  animation: gsb-fill-bar 2.05s steps(22, end) 0.9s forwards;
+}
+
+.gsb__status {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--gs-mono);
+  font-size: clamp(9px, 1.05vmin, 11px);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #5f7a71;
+}
+
+.gsb__status-a,
+.gsb__status-b {
+  grid-area: 1 / 1 / 2 / 2;
+  justify-self: start;
+}
+
+.gsb__status-a {
+  color: #7ff0bb;
+  opacity: 0;
+  animation:
+    gsb-fade-in 0.4s ease 1s forwards,
+    gsb-fade-out 0.001s linear 3.02s forwards;
+}
+
+.gsb__status-b {
+  color: #c9ffe6;
+  opacity: 0;
+  animation: gsb-fade-in 0.35s ease 3.06s forwards;
+}
+
+.gsb__status-b::after {
+  content: "\258C";
+  margin-left: 0.6em;
+  color: #5ce1a0;
+  animation: gsb-blink 1s steps(2, end) infinite;
+}
+
+.gsb__status-r {
+  grid-area: 1 / 2 / 2 / 3;
+  justify-self: end;
+}
+
+.gsb__controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: clamp(10px, 1.6vmin, 16px) clamp(16px, 2.2vmin, 28px) clamp(12px, 1.8vmin, 20px);
+}
+
+.gsb__btn {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  font-family: var(--gs-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #cfe9e0;
+  background: rgba(6, 12, 10, 0.72);
+  border: 1px solid rgba(92, 225, 160, 0.28);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.gsb__btn:hover,
+.gsb__btn:focus-visible {
+  border-color: #5ce1a0;
+  color: #c9ffe6;
+  outline: none;
+}
+
+.gsb__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #5ce1a0;
+  box-shadow: 0 0 8px rgba(92, 225, 160, 0.75);
+}
+
+.gsb__btn[data-on="0"] .gsb__dot {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px #5f7a71;
+}
+
+/* ---- hand-off: the console powers on as the splash recedes -------------- */
+html.gsb-handoff #root {
+  animation: gsb-app-in 0.78s cubic-bezier(0.22, 0.75, 0.2, 1) both;
+  transform-origin: 50% 46%;
+}
+
+@keyframes gsb-app-in {
+  from {
+    opacity: 0;
+    transform: scale(1.008);
+    filter: brightness(0.78);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+@keyframes gsb-fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes gsb-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes gsb-rule-in {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes gsb-letter-in {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes gsb-type-in {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes gsb-fill-bar {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes gsb-sweep {
+  to {
+    transform: translateY(560%);
+  }
+}
+
+@keyframes gsb-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gsb,
+  .gsb--out,
+  html.gsb-handoff #root {
+    transition: none;
+    animation: none !important;
+  }
+
+  .gsb__sweep,
+  .gsb__status-b::after {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+
+  .gsb__mark span,
+  .gsb__log li,
+  .gsb__tag,
+  .gsb__rule,
+  .gsb__mark-rule,
+  .gsb__sub-en,
+  .gsb__sub-zh,
+  .gsb__corner,
+  .gsb__status-a,
+  .gsb__status-b {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+
+  .gsb__status-a {
+    display: none;
+  }
+}
+/* The Windows shell fills the whole frame with --dsw-specific-sidebar-fill
+   (it is also the title-strip colour). Keep that layer transparent so the map
+   shows through, and give the sidebar column its own solid surface. */
+[class*="sidebarCol"] {
+  background-color: #070804 !important;
+}
+/* ---- opaque composer ---------------------------------------------------
+   The composer strip fades from --dsw-alias-bg-base, which this skin sets to
+   transparent so the map can show. Re-anchor that fade on the panel colour so
+   the input box stays a solid surface instead of letting the map through. */
+[class*="composerSeat"] {
+  background: linear-gradient(
+    180deg,
+    rgba(7, 15, 12, 0) 0px,
+    rgba(7, 15, 12, 0.82) 16px,
+    #070f0c 38px
+  ) !important;
+}
+

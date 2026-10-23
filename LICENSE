@@ -1,24 +1,30 @@
-This is free and unencumbered software released into the public domain.
+# dsh-protocol-skin
 
-Anyone is free to copy, modify, publish, use, compile, sell, or
-distribute this software, either in source code form or as a compiled
-binary, for any purpose, commercial or non-commercial, and by any
-means.
+## 授权条款（Attribution-NonCommercial-ShareAlike 4.0 International）
 
-In jurisdictions that recognize copyright laws, the author or authors
-of this software dedicate any and all copyright interest in the
-software to the public domain. We make this dedication for the benefit
-of the public at large and to the detriment of our heirs and
-successors. We intend this dedication to be an overt act of
-relinquishment in perpetuity of all present and future rights to this
-software under copyright law.
+本作品（以下简称「本皮肤」）依据 **知识共享 署名-非商业性使用-相同方式共享 4.0 国际**
+（CC BY-NC-SA 4.0）授权。完整的法律文本见：
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
+### 摘要（Human-readable deed）
 
-For more information, please refer to <https://unlicense.org>
+- **署名（BY）**：转载、修改、再分发时必须保留原作者署名与本许可声明。
+- **非商业性使用（NC）**：**不得**将本皮肤用于商业目的，包括但不限于：出售、
+  出租、收费授权、作为收费服务/软件的一部分、投放广告牟利等。
+  仅用于个人学习、研究、演示与 DeepSeek Harness 的非商业安装运行，属于允许范围。
+- **相同方式共享（SA）**：若修改并再分发本皮肤，衍生作品必须继续以相同许可发布。
+
+### 特别说明
+
+1. 代码文件（index.js、skin.css、splash.html、splash.js 等）以 CC BY-NC-SA 4.0 授权。
+2. 随包素材（assets/contour-hi.webp、assets/rhodes-small.png、assets/welcome.opus）
+   由原作者提供；其原始权利不因本许可而改变，分发前请自行确认素材本身的授权范围。
+3. 本许可不限制 DeepSeek Harness（DSH）通过其插件机制（plugin_manager / dsh plugin）
+   直接读取、加载与安装本皮肤；「禁止商用」仅约束使用者不得拿它牟利。
+
+### 本许可不授予的权限
+
+- 商标权、肖像权、名誉权等与著作权无关的权利。
+- 本皮肤中引用的任何第三方内容（如上所述素材）的授权。
+
+© 2026 dsh-protocol-skin 原作者。保留所有未明确授予的权利。

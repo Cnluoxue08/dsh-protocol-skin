@@ -1,0 +1,10 @@
+# ============================================================================
+# dsh-protocol-skin - bundle patch
+# ============================================================================
+# One host row: injects the theme stylesheet plus the video boot splash into
+# the served index, and serves the boot video from /prts-boot/*.
+# ============================================================================
+
+- insert:
+    - id: protocol-skin
+      name: dsh-protocol-skin

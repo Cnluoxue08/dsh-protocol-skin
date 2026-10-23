@@ -1,0 +1,21 @@
+{
+  "name": "dsh-protocol-skin",
+  "version": "1.0.0",
+  "description": "Protocol-console skin for DeepSeek Harness: near-black canvas with mint and orange accents, a topographic conversation backdrop, a Rhodes Island sidebar watermark, a boot splash with a hand-off animation and toggleable boot sound.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./icon": "./icon.svg",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "icon": "./icon.svg",
+  "files": ["index.js", "assets", "cordis.patch.yml", "locale", "icon.svg", "README.md"],
+  "keywords": ["dsh", "dsh-plugin", "deepseek-harness", "theme", "skin", "arknights", "prts"],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "CC-BY-NC-SA-4.0"
+}
